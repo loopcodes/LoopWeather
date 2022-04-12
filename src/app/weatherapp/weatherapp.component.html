@@ -1,0 +1,67 @@
+<div class="container">
+    <video src="../../assets/video.mp4" autoplay muted loop></video>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <a href="" class="navbar-brand">Loop<span>Weather</span>&nbsp;<i class="fa-solid fa-sun"></i></a>
+        <div class="navbar-nav m-auto">
+            <h3>{{todayDate | date: 'EEE dd MMM'}}</h3>
+        </div>
+        
+    </nav>
+
+
+
+
+    <div class="row text-white">
+        <div class="col-md-6 offset-md-3 mb-5">
+            <div class="col-sm-12 text-center">
+                <div class="yes input-group p-4">
+                    <input type="text" class="form-control text-white  bg-transparent" #userInput placeholder="Search City">
+                    <button class="btn btn-primary" type="button" (click)="getCity(userInput.value)"><i class="fa-solid fa-search"></i></button>
+                </div>
+            
+                <div class="content shadow-lg bg-transparent mt-4">
+                <div class="yet">
+                    <h5>Weather forecast in your city currently</h5><hr>
+                    <h2>{{weather.name}}</h2>
+                    <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}.png" alt="">
+                </div>
+                
+                
+                    <div class="col-sm-12">
+                        <span class="temp">{{weather.main.temp | number: '1.0-0'}} &#176;C</span>
+                        <p class="text-uppercase font-italic font-weight-bold">{{weather.weather[0].description}}</p>
+                    </div>
+                
+    
+                    <div class="tables">
+                        <table class="table table-transparent text-white table-sm">
+                            <tbody>
+                                <tr>
+                                    <td>Sunrise</td><td>{{weather.sys.sunrise * 1000 | date: 'H:mm'}}am</td>
+                                </tr>
+                                <tr>
+                                    <td>Max-temp</td><td>{{weather.main.temp_max | number: '1.0-0' }}&#176;</td>
+                                </tr>
+                                <tr>
+                                    <td>Min-temp</td><td>{{weather.main.temp_min | number: '1.0-0'}}&#176;</td>
+                                </tr>
+                                <tr>
+                                    <td>Humidity</td><td>{{weather.main.humidity}}%</td>
+                                </tr>
+                                <tr>
+                                     <td>Sunset</td><td>{{weather.sys.sunset * 1000 | date: 'H:mm'}}pm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+

@@ -24,12 +24,12 @@ input:focus {
 }
 
 span {
-  color: rgb(92, 182, 243);
+  color: rgb(2, 133, 221);
 }
 
-span .temp {
+.temp {
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .row {
@@ -62,7 +62,7 @@ hr {
 @media screen and (max-width: 1070px) {
 
   .row {
-    margin-top: 5%;
+    margin-top: 3%;
     position: relative;
   }
 

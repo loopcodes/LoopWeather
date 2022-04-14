@@ -23,12 +23,10 @@ input:focus {
   box-shadow: none;
 }
 
-span {
-  color: rgb(2, 133, 221);
-}
+
 
 .temp {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 600;
 }
 
@@ -38,7 +36,7 @@ span {
 }
 
 .content {
-  height: 400px;
+  height: 430px;
   border-radius: 8px;
   backdrop-filter: blur(5px);
 }

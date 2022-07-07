@@ -3,6 +3,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  filter: brightness(90%);
 }
 
 @media (min-aspect-ratio: 16/9) {

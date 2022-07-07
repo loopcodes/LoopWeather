@@ -16,7 +16,7 @@
 @media (max-aspect-ratio: 16/9) {
   .back-vid {
     width: auto;
-    height: 100%;
+    height: 100vh;
   }
 }
 
